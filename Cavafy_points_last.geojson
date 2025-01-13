@@ -1,0 +1,90 @@
+{
+    "type": "FeatureCollection",
+    "name": "Cavafy_Points_Cleaned",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "id": 1,
+          "Name": "Lighthouse of Alexandria",
+          "Era": "Mythological City",
+          "Poem": "The God Abandons Antony",
+          "Details": "The poem reflects on the grandeur and symbolic importance of the city and the lighthouse as a beacon of Alexandrian identity."
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [29.897, 31.213]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": 2,
+          "Name": "Serapeum of Alexandria",
+          "Era": "Mythological City",
+          "Poem": "\"Priest at the Serapeion\"",
+          "Details": "Discussed as a symbolic and historical center of Alexandrian religious life."
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [29.896449717764458, 31.18240053600001]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": 3,
+          "Name": "El Raml Station",
+          "Era": "Sensual City",
+          "Poem": "\"In the Street\", \"The Windows of the Tobacco Shop\"",
+          "Details": "Inspired David Hockney's paintings, this part of the city also known as Quartier Attarine, represents the bustling energy of Alexandria’s urban life."
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [29.901104247777091, 31.201410306679037]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": 4,
+          "Name": "Le Metropole Hotel",
+          "Era": "Sensual City",
+          "Poem": "\"One Night\"",
+          "Details": "Cavafy's office used to be here, close to Billiards Palace where he met lovers."
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [29.900461306860951, 31.200767365762896]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": 5,
+          "Name": "Cavafy House",
+          "Era": "Literal City",
+          "Poem": "\"The City\", \"Since Nine O'clock\"",
+          "Details": "The house Cavafy lived and wrote his poems. It is now a museum."
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [29.901233288735607, 31.197605862279115]
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "id": 6,
+          "Name": "Greek Orthodox Cathedral",
+          "Era": "Literal City",
+          "Poem": "\"In Church\"",
+          "Details": "Key cultural and religious site for Alexandrian Greek Orthodox Christians."
+        },
+        "geometry": {
+          "type": "Point",
+          "coordinates": [29.895990150842014, 31.195244639125821]
+        }
+      }
+    ]
+  }

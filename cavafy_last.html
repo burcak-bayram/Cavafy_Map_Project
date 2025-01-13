@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cavafy Map Project</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+</head>
+<body>
+    <div id="map" style="width: 100%; height: 100vh;"></div>
+    <script>
+        // Initialize the map
+        var map = L.map('map').setView([31.2007, 29.9004], 13); // Center the map on Alexandria
+
+        // Add OpenStreetMap base layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Add your GeoTIFF overlay (new historical map)
+        // Replace "Greek_Church_Aligned.tif" with your actual GeoTIFF file name
+        const greekChurchOverlay = L.imageOverlay('Greek_Church_Aligned.tif', [
+            [31.2157, 29.8855], // Top-left corner lat/lng
+            [31.2005, 29.9012]  // Bottom-right corner lat/lng
+        ]).addTo(map);
+
+        // Add your GeoJSON points
+        // Replace "Cavafy_Last.geojson" with your actual GeoJSON file name
+        fetch('Cavafy_Last.geojson')
+            .then(response => response.json())
+            .then(data => {
+                L.geoJSON(data, {
+                    pointToLayer: function (feature, latlng) {
+                        // Customize marker icons or styles here
+                        return L.marker(latlng);
+                    },
+                    onEachFeature: function (feature, layer) {
+                        // Add popups with details from GeoJSON properties
+                        layer.bindPopup(`
+                            <strong>${feature.properties.Name}</strong><br>
+                            <em>${feature.properties.Poem}</em><br>
+                            ${feature.properties.Details}
+                        `);
+                    }
+                }).addTo(map);
+            })
+            .catch(err => console.error('Error loading GeoJSON:', err));
+    </script>
+</body>
+</html>
